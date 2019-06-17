@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="alto" class="com.examples.spring.core.Car">
+		<property name="manufacturer" value="Maruti" />
+		<property name="model" value="Alto" />
+		<property name="color" value="White" />
+		<property name="engine" ref="k20"/>
+	</bean>
+
+	<bean id="k10" class="com.examples.spring.core.Engine">
+		<property name="engineCapacity" value="1000" />
+		<property name="power" value="5" />
+		<property name="noOfCyclinders" value="3" />
+	</bean>
+	
+	<bean id="k20" class="com.examples.spring.core.Engine">
+		<property name="engineCapacity" value="2000" />
+		<property name="power" value="5" />
+		<property name="noOfCyclinders" value="4" />
+	</bean>
+	
+</beans>
